@@ -1,0 +1,54 @@
+﻿@model WebApplication7.user
+
+@{
+    ViewBag.Title = "addUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Register</h2>
+
+<form action="@Url.Action("addUser", "Home")" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="firstname" class="control-label col-md-2">First Name</label>
+        <div class="col-md-10">
+            <input type="text" id="firstname" name="firstname" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="lastname" class="control-label col-md-2">Last Name</label>
+        <div class="col-md-10">
+            <input type="text" id="lastname" name="lastname" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="address" class="control-label col-md-2">Address</label>
+        <div class="col-md-10">
+            <input type="text" id="address" name="address" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="control-label col-md-2">Email</label>
+        <div class="col-md-10">
+            <input type="text" id="email" name="email" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password" class="control-label col-md-2">Password</label>
+        <div class="col-md-10">
+            <input type="password" id="password" name="password" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Register" class="btn btn-default" />
+        </div>
+    </div>
+</form>
+
